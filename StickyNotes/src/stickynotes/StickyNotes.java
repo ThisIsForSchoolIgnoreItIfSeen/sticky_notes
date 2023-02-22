@@ -1,3 +1,5 @@
+//GITHUB TAG
+
 package stickynotes;
 
 import java.awt.BorderLayout;
