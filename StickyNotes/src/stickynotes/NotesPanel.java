@@ -14,7 +14,7 @@ public class NotesPanel extends JPanel {
 
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		g.drawLine(0, 0, 100, 200);
+		//g.drawLine(0, 0, 100, 200);
 	}
 	
 }
