@@ -1,6 +1,7 @@
 //GITHUB TAG
 
 package stickynotes;
+package notes;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
