@@ -15,6 +15,17 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class StickyNotes implements ActionListener, MouseListener {
+	//if this your main class make it contain a arraylist of note objects for convinient storage,
+	// whenever a note is instantiated, add another object to the arraylist
+	//at start of runtime, when prior session notes are retrieveed, they will be stored in this arraylist
+
+	//include an actionlistener for jpanel closed, if user presses x on main jpanel it should call the
+	// storeInFiles function from data_management
+
+	//also make sure that if a note panel is deleted the action taken is consistient, eihter it deletes the note
+	// from the arraylist as well or it keeps it htere and there is osme way for the user to retrieve the note
+	// if you go with option #2, make sure there is a different way for users to delete notes,
+	// what exactly that is I leave to your imagination
 	
 	JFrame console = new JFrame("JNotes Console");
 	NotesPanel panel = new NotesPanel();
@@ -38,7 +49,7 @@ public class StickyNotes implements ActionListener, MouseListener {
 		console.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		console.setVisible(true);
 	}
-
+//main funciton is ok for testing, but at end there should only be teh main function in the main file
 	public static void main(String[] args) {
 		new StickyNotes();
 
@@ -63,7 +74,7 @@ public class StickyNotes implements ActionListener, MouseListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource().equals(addNoteB)) {//When the add note button is pressed
 			System.out.println("Hello");
-			//Add a new JPanel
+			//Add a new JPanel, put in
 		}
 		
 	}

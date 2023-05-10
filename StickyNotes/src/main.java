@@ -1,6 +1,17 @@
+//needs to import all files from stickynotes folder
+import stickynotes;
+import java.util.ArrayList;
 //aaaaaaaaaaaaaaaaaaahhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-class come_up_wiht_a_name {
+class NotesProject {
     public static void main(String args) {
         //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahhhhhhhhhhhhhhhhhhhhhhhh
+        //call retrieve notes from data management
+
+        //instantiate a master notes panel
+
+        //instansiate a note window for each of the notes that was retrieved
+
+        //add a note to arraylist of notes whenever a new panel is created
+
     }
 }
