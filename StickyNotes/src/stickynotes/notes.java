@@ -15,4 +15,9 @@ public class note {
     //this is the main class that will be used for runtime storage of notes, feel free to add methods that you think would be useful
     String title;
     String content;
+
+    note() {
+        title = "Type Something";
+        content  = "type something";
+    }
 }

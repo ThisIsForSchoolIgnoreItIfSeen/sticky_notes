@@ -1,6 +1,5 @@
 //needs to import all files from stickynotes folder
-import stickynotes;
-import java.util.ArrayList;
+package stickynotes;
 //aaaaaaaaaaaaaaaaaaahhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 class NotesProject {
     public static void main(String args) {

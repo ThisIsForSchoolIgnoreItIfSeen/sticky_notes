@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b85f38c8-5f67-427a-96c6-256af68789d1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyNotes/src/data_management.java" beforeDir="false" afterPath="$PROJECT_DIR$/StickyNotes/src/stickynotes/data_management.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StickyNotes/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/StickyNotes/src/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyNotes/src/stickynotes/NotesPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/StickyNotes/src/stickynotes/NotesPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyNotes/src/stickynotes/StickyNotes.java" beforeDir="false" afterPath="$PROJECT_DIR$/StickyNotes/src/stickynotes/StickyNotes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StickyNotes/src/stickynotes/StickyNotes.java" beforeDir="false" afterPath="$PROJECT_DIR$/StickyNotes/src/stickynotes/display_controls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StickyNotes/src/stickynotes/data_management.java" beforeDir="false" afterPath="$PROJECT_DIR$/StickyNotes/src/stickynotes/data_management.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StickyNotes/src/stickynotes/notes.java" beforeDir="false" afterPath="$PROJECT_DIR$/StickyNotes/src/stickynotes/notes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,13 +27,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/kabir/Documents/GitHub/sticky_notes/StickyNotes/src/stickynotes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kabir/Documents/GitHub/sticky_notes/StickyNotes/src/stickynotes&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kabir\Documents\GitHub\sticky_notes\StickyNotes\src\stickynotes" />
@@ -49,6 +48,26 @@
       <option name="presentableId" value="Default" />
       <updated>1678209999682</updated>
     </task>
+    <task id="LOCAL-00001" summary="added in comments of how project should move forwards, added in some skeletons for methods and functions">
+      <created>1683738715142</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683738715142</updated>
+    </task>
+    <task id="LOCAL-00002" summary="realized I forgot something">
+      <created>1683738853588</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683738853588</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added in comments of how project should move forwards, added in some skeletons for methods and functions" />
+    <MESSAGE value="realized I forgot something" />
+    <option name="LAST_COMMIT_MESSAGE" value="realized I forgot something" />
   </component>
 </project>

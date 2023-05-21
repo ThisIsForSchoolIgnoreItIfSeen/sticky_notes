@@ -66,14 +66,5 @@ public ArrayList<note> retrieveNotes() {
   // should be able to pull out the title of the note and differentiate it from the rest of the content
   //function also needs to be able to tell when it has taken all the notes and there are no more
   //this funciton will be ran whenever an instance of sticky notes is started
-}
-
-//having a main class can be useful for testing, but make sure to remove this before we're done with the project
-//there should only be one executable in the file structure
-class Main {
-  public static void main(String[] args) {
-     FileHelper fileHelper = new FileHelper(this);
-    fileHelper.saveToFile("myfile.txt", "Hello world!");
-    String fileContents = fileHelper.readFromFile("myfile.txt");
-  }
+  File f =
 }
