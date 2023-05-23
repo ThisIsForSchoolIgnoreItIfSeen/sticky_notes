@@ -9,19 +9,24 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JTextField;
+
 import java.util.ArrayList;
 
-public class NotePanel implements ActionListender, WindowListener {
+public class display_controls implements ActionListener, WindowListener {
 	JFrame console = new JFrame("note #n");
 	NotesPanel panel = new NotesPanel();
 	JTextField title = new JTextField("type something");
 	JTextField content = new JTextField("type something");
-	note data = new note();
-	public NotePanel(note stuff) {
+	notes data = new notes();
+	public display_controls(notes stuff) {
 		//takes in
 		data = stuff;
 		title = data.title;
@@ -42,7 +47,7 @@ public class NotePanel implements ActionListender, WindowListener {
 			}
 		});
 		console.setVisible(true);
-		//when title is pudated update title content in note
+		//when title is updated update title content in note
 
 		//same but for content
 	}
@@ -50,6 +55,54 @@ public class NotePanel implements ActionListender, WindowListener {
 	public void exitProcedure() {
 		//transfer content to correct thingamabob
 		//delete window
+	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowActivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }
 

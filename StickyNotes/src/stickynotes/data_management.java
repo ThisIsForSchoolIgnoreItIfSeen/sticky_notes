@@ -9,12 +9,13 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arraylist;
 
-public class FileHelper {
+public class data_management {
   private File context;
 
-  public FileHelper(File context) {
+  public data_management(File context) {
   this.context = context;
    }
 
@@ -51,7 +52,7 @@ public class FileHelper {
   }
 }
 
-public void storeInFiles(ArrayList<note> notes) {
+public void storeInFiles(ArrayList<notes> notes) {
   //this function should go through each notes in the notes arraylist and put them into a different
   // file in the storedNotes folder
   //suggestion: name the files note1.txt, note2.txt... so that when we are retrieving existing
@@ -61,7 +62,7 @@ public void storeInFiles(ArrayList<note> notes) {
   //for reference this funciton will be run at the end of each session
 }
 
-public ArrayList<note> retrieveNotes() {
+public ArrayList<notes> retrieveNotes() {
   //function should go through files in storedNotes directory and turn each text file into a note,
   // should be able to pull out the title of the note and differentiate it from the rest of the content
   //function also needs to be able to tell when it has taken all the notes and there are no more
