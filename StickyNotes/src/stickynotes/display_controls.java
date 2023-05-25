@@ -26,6 +26,11 @@ public class display_controls implements ActionListener, WindowListener {
 	JTextField title = new JTextField("type something");
 	JTextField content = new JTextField("type something");
 	notes data = new notes();
+	Container north = new Container();
+	Container east = new Container();
+	Container south = new Container();
+	Container west = new Container();
+	
 	public display_controls(notes stuff) {
 		//takes in
 		data = stuff;
@@ -34,11 +39,16 @@ public class display_controls implements ActionListener, WindowListener {
 		console.setSize(600, 800);
 		console.setLayout(new BorderLayout());
 		console.add(panel, BorderLayout.CENTER);
-		north.setLayout(new GridLayout(1,1));
+		console.add(north, BorderLayout.NORTH);
+		console.add(east, BorderLayout.EAST);
+		console.add(west, BorderLayout.WEST);
+		console.add(south, BorderLayout.SOUTH);
+		north.setLayout(new GridLayout(2,1));
 		south.setLayout(new GridLayout(1,1));
+		north.add(title);
+		north.add(content);
 		title.addActionListener(this);
 		content.addActionListener(this);
-		console.add(north, BorderLayout.NORTH);
 		console.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		console.addWindowListener(new WindowAdapter() {
 			@Override
@@ -123,10 +133,10 @@ public class StickyNotes implements ActionListener, MouseListener, WindowListene
 	NotesPanel panel = new NotesPanel();
 	JButton addNoteB = new JButton("ADD A NOTE");
 	ArrayList<JFrame> notePanels = new ArrayList<JFrame>();
-	ArrayList<note> notes = new ArrayList<note>();
+	ArrayList<notes> notes = new ArrayList<notes>();
 	JLabel title = new JLabel("JNotes Console");
 	//list active notes' titles
-	JLabel activeNotes = new JLabel("")
+	JLabel activeNotes = new JLabel("");
 	Container north = new Container();
 	Container south = new Container();
 	Container body = new Container();
