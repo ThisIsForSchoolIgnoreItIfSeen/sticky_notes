@@ -1,6 +1,6 @@
 //GITHUB TAG
 
-package stickynotes;
+package sticky_notes;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -19,23 +19,27 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-public class display_controls implements ActionListener, WindowListener {
+public class Notes_Display implements ActionListener, WindowListener {
+	StickyNotes root;
 	JFrame console = new JFrame("note #n");
 	NotesPanel panel = new NotesPanel();
 	JTextField title = new JTextField("type something");
 	JTextField content = new JTextField("type something");
-	notes data = new notes();
+	Notes data;
 	Container north = new Container();
 	Container east = new Container();
 	Container south = new Container();
 	Container west = new Container();
 	
-	public display_controls(notes stuff) {
+	public Notes_Display(StickyNotes master, Notes stuff) {
 		//takes in
+		root = master
 		data = stuff;
-		title = data.title;
-		content = data.content;
+		title.setText(data.title);
+		content.setText(data.content);
 		console.setSize(600, 800);
 		console.setLayout(new BorderLayout());
 		console.add(panel, BorderLayout.CENTER);
@@ -50,21 +54,8 @@ public class display_controls implements ActionListener, WindowListener {
 		title.addActionListener(this);
 		content.addActionListener(this);
 		console.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-		console.addWindowListener(new WindowAdapter() {
-			@Override
-			public void windowClosing(WindowEvent event) {
-				exitProcedure();
-			}
-		});
+		console.addWindowListener();
 		console.setVisible(true);
-		//when title is updated update title content in note
-
-		//same but for content
-	}
-
-	public void exitProcedure() {
-		//transfer content to correct thingamabob
-		//delete window
 	}
 
 	@Override
@@ -76,7 +67,7 @@ public class display_controls implements ActionListener, WindowListener {
 	@Override
 	public void windowClosing(WindowEvent e) {
 		// TODO Auto-generated method stub
-		
+		root.deleteNote(data);
 	}
 
 	@Override
@@ -112,7 +103,9 @@ public class display_controls implements ActionListener, WindowListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		
+		data.title = title.getText();
+		data.content = content.getText();
+		root.updateActiveNotes();
 	}
 }
 
@@ -133,7 +126,7 @@ public class StickyNotes implements ActionListener, MouseListener, WindowListene
 	NotesPanel panel = new NotesPanel();
 	JButton addNoteB = new JButton("ADD A NOTE");
 	ArrayList<JFrame> notePanels = new ArrayList<JFrame>();
-	ArrayList<notes> notes = new ArrayList<notes>();
+	ArrayList<Notes> notes = new ArrayList<notes>();
 	JLabel title = new JLabel("JNotes Console");
 	//list active notes' titles
 	JLabel activeNotes = new JLabel("");
@@ -145,8 +138,9 @@ public class StickyNotes implements ActionListener, MouseListener, WindowListene
 		console.setSize(600, 800);
 		console.setLayout(new BorderLayout());
 		console.add(panel, BorderLayout.CENTER);
-		north.setLayout(new GridLayout(1,1));
+		north.setLayout(new GridLayout(2,1));
 		north.add(addNoteB);
+		north.add(activeNotes);
 		south.setLayout(new GridLayout(1,1));
 		addNoteB.addActionListener(this);
 		
@@ -162,8 +156,8 @@ public class StickyNotes implements ActionListener, MouseListener, WindowListene
 		console.setVisible(true);
 	}
 	public void exitProcedure() {
-		//needs to run sotre notes from data_management
-		//needs to quit program and close all active notes
+		storeInFiles(notes);
+		System.exit();
 	}
 	@Override
 	public void mouseClicked(MouseEvent e) {}
@@ -184,9 +178,36 @@ public class StickyNotes implements ActionListener, MouseListener, WindowListene
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource().equals(addNoteB)) {//When the add note button is pressed
 			System.out.println("Hello");
-			//Add a new JPanel, put in
+			//adda new note to arraylist of notes, create a new jpanel passing self and new note as arguments
+			notes.add(new Notes());
+			new Notes_Display(this, notes.get(notes.size()-1));
+			updateActiveNotes();
 		}
 		
+	}
+	public void instantiateNote(Notes i) {
+		//add note i to arraylist of notes, create a new jpanel passing self and i as arguments
+		notes.add(i);
+		new Notes_Display(this, i);
+		updateActiveNotes();
+	}
+	public void updateActiveNotes() {
+		String ANS = "";
+		for (Notes i : notes) {
+			ANS += i.title + '\n';
+		}
+		activeNotes.setText(ANS);
+	}
+	public void deleteNote(Notes tbd) {
+		//delete note from arraylist and corresponding jpanel, update active notes label
+		Iterator throughNotes = notes.iterator();
+		while (throughNotes.hasNext()) {
+			Notes x = (Notes) throughNotes.next();
+			if (x == tbd) {
+				throughNotes.remove();
+			}
+		}
+		updateActiveNotes();
 	}
 
 }

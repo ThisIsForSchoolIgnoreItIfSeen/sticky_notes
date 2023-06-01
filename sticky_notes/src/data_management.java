@@ -1,5 +1,5 @@
 //allows access to other files
-package stickynotes;
+package sticky_notes;
 /*
 code in this file is to aid in long term storage of user-taken notes
 needs the ability to store notes taken in files and retrieve them
@@ -60,6 +60,7 @@ public void storeInFiles(ArrayList<notes> notes) {
   //suggestion: put the title of the note in the first line of the file and then append the rest of note after that
   //function should override files currently in storedNotes
   //for reference this funciton will be run at the end of each session
+  return;
 }
 
 public ArrayList<notes> retrieveNotes() {
@@ -67,5 +68,5 @@ public ArrayList<notes> retrieveNotes() {
   // should be able to pull out the title of the note and differentiate it from the rest of the content
   //function also needs to be able to tell when it has taken all the notes and there are no more
   //this funciton will be ran whenever an instance of sticky notes is started
-  File f =
+  return null;
 }

@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b85f38c8-5f67-427a-96c6-256af68789d1" name="Changes" comment="">
+    <list default="true" id="b85f38c8-5f67-427a-96c6-256af68789d1" name="Changes" comment="changes at Starbucks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyNotes/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/StickyNotes/src/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyNotes/src/stickynotes/StickyNotes.java" beforeDir="false" afterPath="$PROJECT_DIR$/StickyNotes/src/stickynotes/display_controls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyNotes/src/stickynotes/data_management.java" beforeDir="false" afterPath="$PROJECT_DIR$/StickyNotes/src/stickynotes/data_management.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyNotes/src/stickynotes/notes.java" beforeDir="false" afterPath="$PROJECT_DIR$/StickyNotes/src/stickynotes/notes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StickyNotes/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StickyNotes/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StickyNotes/.project" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StickyNotes/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StickyNotes/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StickyNotes/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/src/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StickyNotes/src/stickynotes/NotesPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/src/NotesPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StickyNotes/src/stickynotes/data_management.java" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/src/data_management.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StickyNotes/src/stickynotes/display_controls.java" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/src/Display_Controls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StickyNotes/src/stickynotes/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/src/sticky_notes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StickyNotes/src/stickynotes/notes.java" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/src/Notes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +43,16 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kabir\Documents\GitHub\sticky_notes\sticky_notes\src" />
+      <recent name="C:\Users\kabir\Documents\GitHub\sticky_notes\sticky_notes" />
+      <recent name="C:\Users\kabir\Documents\GitHub\sticky_notes\StickyNotes\src" />
       <recent name="C:\Users\kabir\Documents\GitHub\sticky_notes\StickyNotes\src\stickynotes" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="open sticky_notes" />
+    </option>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -62,12 +77,20 @@
       <option name="project" value="LOCAL" />
       <updated>1683738853588</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="changes at Starbucks">
+      <created>1684688855070</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684688855070</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added in comments of how project should move forwards, added in some skeletons for methods and functions" />
     <MESSAGE value="realized I forgot something" />
-    <option name="LAST_COMMIT_MESSAGE" value="realized I forgot something" />
+    <MESSAGE value="changes at Starbucks" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes at Starbucks" />
   </component>
 </project>

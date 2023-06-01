@@ -1,5 +1,5 @@
 //allows other files to access class
-package stickynotes;
+package sticky_notes;
 
 //this file will contain the class and methods for storing the notes at runtime
 import java.util.ArrayList;
@@ -11,12 +11,12 @@ enum Type {
     EVENT
 }*/
 
-public class notes {
+public class Notes {
     //this is the main class that will be used for runtime storage of notes, feel free to add methods that you think would be useful
     String title;
     String content;
 
-    notes() {
+    Notes() {
         title = "Type Something";
         content  = "type something";
     }
