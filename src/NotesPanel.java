@@ -1,6 +1,5 @@
 //GITHUB TAG
 
-package stickynotes;
 
 /*
 Okay Nathan, I'm less sure about how you're using your file structure and which of your two files is for what,

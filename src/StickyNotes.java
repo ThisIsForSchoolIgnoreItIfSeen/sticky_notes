@@ -1,7 +1,5 @@
 //GITHUB TAG
 
-package sticky_notes;
-
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.GridLayout;
@@ -22,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Notes_Display implements ActionListener, WindowListener {
+class Notes_Display implements ActionListener, WindowListener {
 	StickyNotes root;
 	JFrame console = new JFrame("note #n");
 	NotesPanel panel = new NotesPanel();
@@ -36,7 +34,7 @@ public class Notes_Display implements ActionListener, WindowListener {
 	
 	public Notes_Display(StickyNotes master, Notes stuff) {
 		//takes in
-		root = master
+		root = master;
 		data = stuff;
 		title.setText(data.title);
 		content.setText(data.content);
@@ -54,7 +52,7 @@ public class Notes_Display implements ActionListener, WindowListener {
 		title.addActionListener(this);
 		content.addActionListener(this);
 		console.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-		console.addWindowListener();
+		console.addWindowListener(this);
 		console.setVisible(true);
 	}
 
@@ -68,6 +66,7 @@ public class Notes_Display implements ActionListener, WindowListener {
 	public void windowClosing(WindowEvent e) {
 		// TODO Auto-generated method stub
 		root.deleteNote(data);
+		console.dispose();
 	}
 
 	@Override
@@ -104,7 +103,11 @@ public class Notes_Display implements ActionListener, WindowListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		data.title = title.getText();
+		String temp = "<html>"+data.title+"</html>";
+		title.setText(temp);
 		data.content = content.getText();
+		temp = "<html>"+data.content+"</html>";
+		content.setText(temp);
 		root.updateActiveNotes();
 	}
 }
@@ -126,13 +129,14 @@ public class StickyNotes implements ActionListener, MouseListener, WindowListene
 	NotesPanel panel = new NotesPanel();
 	JButton addNoteB = new JButton("ADD A NOTE");
 	ArrayList<JFrame> notePanels = new ArrayList<JFrame>();
-	ArrayList<Notes> notes = new ArrayList<notes>();
+	ArrayList<Notes> notes;
 	JLabel title = new JLabel("JNotes Console");
 	//list active notes' titles
 	JLabel activeNotes = new JLabel("");
 	Container north = new Container();
 	Container south = new Container();
 	Container body = new Container();
+	data_management longTermStorer = new data_management();
 	
 	public StickyNotes() {
 		console.setSize(600, 800);
@@ -154,10 +158,18 @@ public class StickyNotes implements ActionListener, MouseListener, WindowListene
 			}
 		});
 		console.setVisible(true);
+		notes = longTermStorer.retrieveNotes();
+		if (notes != null) {
+			for (Notes i : notes) {
+				instantiateNote(i);
+			}
+		} else {
+			notes = new ArrayList<Notes>();
+		}
 	}
 	public void exitProcedure() {
-		storeInFiles(notes);
-		System.exit();
+		longTermStorer.storeInFiles(notes);
+		System.exit(0);
 	}
 	@Override
 	public void mouseClicked(MouseEvent e) {}
@@ -177,7 +189,6 @@ public class StickyNotes implements ActionListener, MouseListener, WindowListene
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource().equals(addNoteB)) {//When the add note button is pressed
-			System.out.println("Hello");
 			//adda new note to arraylist of notes, create a new jpanel passing self and new note as arguments
 			notes.add(new Notes());
 			new Notes_Display(this, notes.get(notes.size()-1));
@@ -187,7 +198,6 @@ public class StickyNotes implements ActionListener, MouseListener, WindowListene
 	}
 	public void instantiateNote(Notes i) {
 		//add note i to arraylist of notes, create a new jpanel passing self and i as arguments
-		notes.add(i);
 		new Notes_Display(this, i);
 		updateActiveNotes();
 	}
@@ -210,4 +220,38 @@ public class StickyNotes implements ActionListener, MouseListener, WindowListene
 		updateActiveNotes();
 	}
 
+	@Override
+	public void windowOpened(WindowEvent e) {
+
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+
+	}
+
+	@Override
+	public void windowActivated(WindowEvent e) {
+
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+
+	}
 }

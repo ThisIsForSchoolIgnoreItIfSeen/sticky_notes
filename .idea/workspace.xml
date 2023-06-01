@@ -4,19 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b85f38c8-5f67-427a-96c6-256af68789d1" name="Changes" comment="changes at Starbucks">
+    <list default="true" id="b85f38c8-5f67-427a-96c6-256af68789d1" name="Changes" comment="checkpoint">
+      <change beforePath="$PROJECT_DIR$/.idea/sticky_notes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sticky_notes.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyNotes/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyNotes/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyNotes/.project" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyNotes/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyNotes/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyNotes/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/src/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyNotes/src/stickynotes/NotesPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/src/NotesPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyNotes/src/stickynotes/data_management.java" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/src/data_management.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyNotes/src/stickynotes/display_controls.java" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/src/Display_Controls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyNotes/src/stickynotes/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/src/sticky_notes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyNotes/src/stickynotes/notes.java" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/src/Notes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/src/Display_Controls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StickyNotes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/src/Notes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Notes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/src/NotesPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NotesPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/src/data_management.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_management.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/src/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/src/sticky_notes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sticky_notes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,15 +35,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kabir/Documents/GitHub/sticky_notes/StickyNotes/src/stickynotes&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/kabir/Documents/GitHub/sticky_notes/StickyNotes/src/stickynotes",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kabir\Documents\GitHub\sticky_notes\src" />
       <recent name="C:\Users\kabir\Documents\GitHub\sticky_notes\sticky_notes\src" />
       <recent name="C:\Users\kabir\Documents\GitHub\sticky_notes\sticky_notes" />
       <recent name="C:\Users\kabir\Documents\GitHub\sticky_notes\StickyNotes\src" />
@@ -53,6 +58,20 @@
     <option name="myCommands">
       <command value="open sticky_notes" />
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="sticky_notes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sticky_notes" />
+      <module name="sticky_notes" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.sticky_notes" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

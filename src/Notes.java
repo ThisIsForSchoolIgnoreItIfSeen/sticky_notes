@@ -1,5 +1,4 @@
 //allows other files to access class
-package sticky_notes;
 
 //this file will contain the class and methods for storing the notes at runtime
 import java.util.ArrayList;
