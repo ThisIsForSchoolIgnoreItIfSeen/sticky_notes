@@ -11,21 +11,20 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
+import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 
-class Notes_Display implements ActionListener, WindowListener {
+class Notes_Display implements DocumentListener, WindowListener {
 	StickyNotes root;
 	JFrame console = new JFrame("note #n");
 	NotesPanel panel = new NotesPanel();
-	JTextField title = new JTextField("type something");
-	JTextField content = new JTextField("type something");
+	JTextArea title = new JTextArea("type something");
+	JTextArea content = new JTextArea("type something");
 	Notes data;
 	Container north = new Container();
 	Container east = new Container();
@@ -37,20 +36,27 @@ class Notes_Display implements ActionListener, WindowListener {
 		root = master;
 		data = stuff;
 		title.setText(data.title);
+		title.setLineWrap(true);
+		title.setWrapStyleWord(true);
 		content.setText(data.content);
+		content.setLineWrap(true);
+		content.setWrapStyleWord(true);
 		console.setSize(600, 800);
 		console.setLayout(new BorderLayout());
-		console.add(panel, BorderLayout.CENTER);
+		//console.add(panel, BorderLayout.CENTER);
 		console.add(north, BorderLayout.NORTH);
 		console.add(east, BorderLayout.EAST);
 		console.add(west, BorderLayout.WEST);
 		console.add(south, BorderLayout.SOUTH);
-		north.setLayout(new GridLayout(2,1));
+		north.setLayout(new GridLayout(1,1));
 		south.setLayout(new GridLayout(1,1));
 		north.add(title);
-		north.add(content);
-		title.addActionListener(this);
-		content.addActionListener(this);
+		JScrollPane scroll = new JScrollPane(content);
+		scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+		console.add(scroll, BorderLayout.CENTER);
+		title.getDocument().addDocumentListener(this);
+		content.getDocument().addDocumentListener(this);
 		console.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		console.addWindowListener(this);
 		console.setVisible(true);
@@ -98,16 +104,24 @@ class Notes_Display implements ActionListener, WindowListener {
 		// TODO Auto-generated method stub
 		
 	}
+	@Override
+	public void insertUpdate(DocumentEvent e) {
+		data.title=title.getText();
+		data.content=content.getText();
+		root.updateActiveNotes();
+	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		data.title = title.getText();
-		String temp = "<html>"+data.title+"</html>";
-		title.setText(temp);
-		data.content = content.getText();
-		temp = "<html>"+data.content+"</html>";
-		content.setText(temp);
+	public void removeUpdate(DocumentEvent e) {
+		data.title=title.getText();
+		data.content=content.getText();
+		root.updateActiveNotes();
+	}
+
+	@Override
+	public void changedUpdate(DocumentEvent e) {
+		data.title=title.getText();
+		data.content=content.getText();
 		root.updateActiveNotes();
 	}
 }
@@ -202,10 +216,11 @@ public class StickyNotes implements ActionListener, MouseListener, WindowListene
 		updateActiveNotes();
 	}
 	public void updateActiveNotes() {
-		String ANS = "";
+		String ANS = "<html>";
 		for (Notes i : notes) {
-			ANS += i.title + '\n';
+			ANS += i.title + "<p>";
 		}
+		ANS += "</html>";
 		activeNotes.setText(ANS);
 	}
 	public void deleteNote(Notes tbd) {

@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b85f38c8-5f67-427a-96c6-256af68789d1" name="Changes" comment="checkpoint">
-      <change beforePath="$PROJECT_DIR$/.idea/sticky_notes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sticky_notes.iml" afterDir="false" />
+    <list default="true" id="b85f38c8-5f67-427a-96c6-256af68789d1" name="Changes" comment="first working product">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/src/Display_Controls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StickyNotes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/src/Notes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Notes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/src/NotesPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NotesPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/src/data_management.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_management.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/src/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/src/sticky_notes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sticky_notes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StickyNotes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StickyNotes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,13 +92,22 @@
       <option name="project" value="LOCAL" />
       <updated>1684688855070</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="first working product">
+      <created>1685653378529</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685653378529</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added in comments of how project should move forwards, added in some skeletons for methods and functions" />
     <MESSAGE value="realized I forgot something" />
     <MESSAGE value="changes at Starbucks" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes at Starbucks" />
+    <MESSAGE value="checkpoint" />
+    <MESSAGE value="first working product" />
+    <option name="LAST_COMMIT_MESSAGE" value="first working product" />
   </component>
 </project>
