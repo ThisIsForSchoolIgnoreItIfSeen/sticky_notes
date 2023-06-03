@@ -21,7 +21,7 @@ import java.util.Iterator;
 
 class Notes_Display implements DocumentListener, WindowListener {
 	StickyNotes root;
-	JFrame console = new JFrame("note #n");
+	JFrame console = new JFrame("Note");
 	NotesPanel panel = new NotesPanel();
 	JTextArea title = new JTextArea("type something");
 	JTextArea content = new JTextArea("type something");
@@ -139,7 +139,7 @@ public class StickyNotes implements ActionListener, MouseListener, WindowListene
 	// if you go with option #2, make sure there is a different way for users to delete notes,
 	// what exactly that is I leave to your imagination
 	
-	JFrame console = new JFrame("JNotes Console");
+	JFrame console = new JFrame("Sticky Notes Console");
 	NotesPanel panel = new NotesPanel();
 	JButton addNoteB = new JButton("ADD A NOTE");
 	ArrayList<JFrame> notePanels = new ArrayList<JFrame>();
